@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 function Nav() {
   return (
     <div>
-      <nav class="nav__container">
+      <nav className="nav__container">
         <div className="nav__logo">
           <img className="nav__logo-img" src={Logo} alt="Website logo"></img>
           <p className="nav__logo-title">Anime Extra</p>

@@ -22,7 +22,7 @@ function TopRows({ title, fetchUrl }) {
       <div className="topRow__posters">
         {manga.map((a, i) => {
           return (
-            <div className="img__container">
+            <div key={i + 10} className="img__container">
               <NavLink to={`/anime/${a.mal_id}`}>
                 <img
                   key={i}

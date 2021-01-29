@@ -1,25 +1,26 @@
 import React, { useState, useEffect } from "react";
 import axios from "../../axios";
 import Hero from "../../img/hero.png";
-import Buttons from "../../UI/buttons/Buttons";
+
 import "./AnimeHeader.css";
 
 function AnimeHeader({ title, fetchUrl }) {
   const [animeHeader, setAnimeHeader] = useState([]);
 
   useEffect(() => {
+    let isMounted = true;
     async function fetchData() {
-      const request = await axios.get(fetchUrl);
-      console.log(request.data);
-      setAnimeHeader(request.data);
-      return request;
+      if (isMounted) {
+        const request = await axios.get(fetchUrl);
+        setAnimeHeader(request.data);
+        // return request;
+      }
+      return () => {
+        isMounted = false;
+      };
     }
     fetchData();
   }, [fetchUrl]);
-
-  function handleClick(event) {
-    event.preventDefault();
-  }
 
   return (
     <React.Fragment>

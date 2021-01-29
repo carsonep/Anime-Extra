@@ -7,10 +7,16 @@ function MangaGenreRows({ title, fetchUrl }) {
   const [manga, setManga] = useState([]);
 
   useEffect(() => {
+    let isMounted = true;
     async function fetchData() {
-      const request = await axios.get(fetchUrl);
-      setManga(request.data.manga);
-      return request;
+      if (isMounted) {
+        const request = await axios.get(fetchUrl);
+        setManga(request.data.manga);
+        // return request;
+      }
+      return () => {
+        isMounted = false;
+      };
     }
     fetchData();
   }, [fetchUrl]);
@@ -22,7 +28,7 @@ function MangaGenreRows({ title, fetchUrl }) {
       <div className="row__posters">
         {manga.map((a, i) => {
           return (
-            <div className="img__container">
+            <div key={i + 20} className="img__container">
               <NavLink to={`/manga/${a.mal_id}`}>
                 <img
                   key={i}

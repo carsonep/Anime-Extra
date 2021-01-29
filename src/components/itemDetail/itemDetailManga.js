@@ -7,14 +7,19 @@ function ItemDetailManga({ match }) {
   const [item, setItem] = useState([]);
 
   useEffect(() => {
+    let isMounted = true;
     async function fetchData() {
-      const request = await axios.get(`https://api.jikan.moe/v3${match.url}`);
-      setItem(request.data);
-      console.log(request.data);
-      return request;
+      if (isMounted) {
+        const request = await axios.get(`https://api.jikan.moe/v3${match.url}`);
+        setItem(request.data);
+        // return request;
+      }
+      return () => {
+        isMounted = false;
+      };
     }
     fetchData();
-  }, []);
+  }, [match.url]);
 
   return (
     <div className="item__detail-container">

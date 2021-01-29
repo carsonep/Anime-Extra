@@ -1,23 +1,26 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "../../axios";
 import "./itemDetail.css";
 import { IoIosStar } from "react-icons/io";
 import Bookmarks from "../Bookmarks/Bookmarks";
-import { reactLocalStorage } from "reactjs-localstorage";
-import { UserContext } from "./UserContext";
 
 function ItemDetail({ match }) {
   const [item, setItem] = useState([]);
-  const [bookmark, setBookmark] = useContext(UserContext);
 
   useEffect(() => {
+    let isMounted = true;
     async function fetchData() {
-      const request = await axios.get(`https://api.jikan.moe/v3${match.url}`);
-      setItem(request.data);
-      return request;
+      if (isMounted) {
+        const request = await axios.get(`https://api.jikan.moe/v3${match.url}`);
+        setItem(request.data);
+        // return request;
+      }
+      return () => {
+        isMounted = false;
+      };
     }
     fetchData();
-  }, []);
+  }, [match.url]);
 
   return (
     <div className="item__detail-container">
@@ -50,10 +53,10 @@ function ItemDetail({ match }) {
 
       <div className="anime__trailer">
         <iframe
-          frameborder="0"
+          frameBorder="0"
           border="0"
-          cellspacing="0"
-          class="responsive-iframe"
+          cellSpacing="0"
+          className="responsive-iframe"
           width="800"
           height="700"
           title="trailer"

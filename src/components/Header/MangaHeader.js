@@ -1,26 +1,26 @@
 import React, { useState, useEffect } from "react";
 import axios from "../../axios";
 import Hero from "../../img/berserk-hero.png";
-import Buttons from "../../UI/buttons/Buttons";
+
 import "./MangaHeader.css";
 
 function MangaHeader({ title, fetchUrl }) {
   const [mangaHeader, setMangaHeader] = useState([]);
 
   useEffect(() => {
+    let isMounted = true;
     async function fetchData() {
-      const request = await axios.get(fetchUrl);
-
-      console.log(request.data);
-      setMangaHeader(request.data);
-      return request;
+      if (isMounted) {
+        const request = await axios.get(fetchUrl);
+        setMangaHeader(request.data);
+        // return request;
+      }
+      return () => {
+        isMounted = false;
+      };
     }
     fetchData();
   }, [fetchUrl]);
-
-  function handleClick(event) {
-    event.preventDefault();
-  }
 
   return (
     <React.Fragment>
