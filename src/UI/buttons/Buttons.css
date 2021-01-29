@@ -1,0 +1,21 @@
+.button {
+  position: absolute;
+  color: #000;
+  width: 10rem;
+  height: 2.5rem;
+  border-radius: 1px;
+  font-weight: 300;
+  font-size: 1.3rem;
+  border: none;
+  outline: none;
+  background-color: #a9a9a9;
+  margin-left: 3.1rem;
+  top: 40%;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #0008ff;
+}

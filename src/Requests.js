@@ -1,0 +1,31 @@
+const requests = {
+  fetchTopAnime: "/top/anime/1/tv",
+  fetchUpcomingAnime: "/top/anime/1/upcoming",
+  fetchActionAnime: "/genre/anime/1/1",
+  fetchAdventureAnime: "/genre/anime/2/1",
+  fetchMysterysAnime: "/genre/anime/7/1",
+  fetchComedyAnime: "/genre/anime/4/1",
+  fetchHorrorAnime: "/genre/anime/14/1",
+  fetchRomanceAnime: "/genre/anime/22/1",
+  fetchShounenAnime: "/genre/anime/27/1",
+  fetchSportsAnime: "/genre/anime/30/1",
+  fetchPsychologicalAnime: "/genre/anime/40/1",
+  fetchMechaAnime: "/genre/anime/18/1",
+  fetchDemonSlayer: "/anime/38000",
+
+  // fetchTopManga: "/top/manga/1/tv",
+  fetchUpcomingManga: "/top/manga/1/upcoming",
+  fetchActionManga: "/genre/manga/1/1",
+  fetchAdventureManga: "/genre/manga/2/1",
+  fetchMysterysManga: "/genre/manga/7/1",
+  fetchComedyManga: "/genre/manga/4/1",
+  fetchHorrorManga: "/genre/manga/14/1",
+  fetchRomanceManga: "/genre/manga/22/1",
+  fetchShounenManga: "/genre/manga/27/1",
+  fetchSportsManga: "/genre/manga/30/1",
+  fetchPsychologicalManga: "/genre/manga/40/1",
+  fetchMechaManga: "/genre/manga/18/1",
+  fetchBersek: "/manga/2",
+};
+
+export default requests;

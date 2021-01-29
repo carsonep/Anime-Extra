@@ -1,0 +1,147 @@
+.item__detail-container {
+  box-sizing: border-box;
+  margin: 0 3.1rem;
+  margin-top: 3.1rem;
+  padding-top: 1rem;
+}
+
+.anime__img-title {
+  display: flex;
+}
+
+.anime__img-container {
+  padding-left: 3.4rem;
+}
+
+.anime__img {
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  height: 20rem;
+  width: 15rem;
+  background-color: yellow;
+}
+
+.anime__title-container {
+  padding-left: 1.5rem;
+  flex-wrap: wrap;
+
+  align-items: flex-start;
+
+  /* justify-content: space-between; */
+}
+
+.anime__title-holder {
+  display: flex;
+  align-items: center;
+
+  flex: 1;
+  justify-content: space-between;
+}
+
+.anime__title {
+  color: #ffffff;
+  margin-top: -0.4rem;
+}
+
+.anime_rating {
+  color: #ececec;
+  margin-top: -0.56rem;
+  display: flex;
+  padding-right: 4.2rem;
+  align-items: center;
+}
+
+.anime_rating-star {
+  padding-right: 0.6rem;
+  color: gold;
+}
+
+.anime__description {
+  padding-right: 3.4rem;
+  font-size: 1.1rem;
+  line-height: 2;
+  color: #ececec;
+}
+
+.anime__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 4.2rem;
+  padding-left: 3.4rem;
+}
+
+.anime__info-more {
+  color: #a9a9a9;
+  font-size: 0.8rem;
+
+  padding-left: 1.5rem;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.anime__info-episodes {
+  padding-right: 5rem;
+}
+
+.item__detail-favorites {
+  background-color: transparent;
+  color: #ffffff;
+  text-align: center;
+  height: 3rem;
+  width: 15rem;
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  line-height: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+}
+
+/* 
+========================
+      BUTTON ONE
+========================
+*/
+
+.item__detail-favorites::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(255, 255, 255, 0.5);
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+  transform: scale(0.1, 1);
+}
+
+.item__detail-favorites:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+.item__detail-favorites::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.item__detail-favorites:hover::after {
+  opacity: 0;
+  letter-spacing: 2px;
+  transform: scale(0.1, 1);
+}
