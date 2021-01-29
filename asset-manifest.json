@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Anime-Extra.git/static/css/main.ed7bf38d.chunk.css",
+    "main.js": "/Anime-Extra.git/static/js/main.64ea6076.chunk.js",
+    "main.js.map": "/Anime-Extra.git/static/js/main.64ea6076.chunk.js.map",
+    "runtime-main.js": "/Anime-Extra.git/static/js/runtime-main.5ac96780.js",
+    "runtime-main.js.map": "/Anime-Extra.git/static/js/runtime-main.5ac96780.js.map",
+    "static/js/2.bd0185b6.chunk.js": "/Anime-Extra.git/static/js/2.bd0185b6.chunk.js",
+    "static/js/2.bd0185b6.chunk.js.map": "/Anime-Extra.git/static/js/2.bd0185b6.chunk.js.map",
+    "static/js/3.70b4470e.chunk.js": "/Anime-Extra.git/static/js/3.70b4470e.chunk.js",
+    "static/js/3.70b4470e.chunk.js.map": "/Anime-Extra.git/static/js/3.70b4470e.chunk.js.map",
+    "index.html": "/Anime-Extra.git/index.html",
+    "static/css/main.ed7bf38d.chunk.css.map": "/Anime-Extra.git/static/css/main.ed7bf38d.chunk.css.map",
+    "static/js/2.bd0185b6.chunk.js.LICENSE.txt": "/Anime-Extra.git/static/js/2.bd0185b6.chunk.js.LICENSE.txt",
+    "static/media/berserk-hero.43953b02.png": "/Anime-Extra.git/static/media/berserk-hero.43953b02.png",
+    "static/media/hero.3f954afe.png": "/Anime-Extra.git/static/media/hero.3f954afe.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5ac96780.js",
+    "static/js/2.bd0185b6.chunk.js",
+    "static/css/main.ed7bf38d.chunk.css",
+    "static/js/main.64ea6076.chunk.js"
+  ]
+}
