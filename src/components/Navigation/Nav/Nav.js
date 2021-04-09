@@ -1,39 +1,37 @@
 import React from "react";
 import "./Nav.css";
 import Logo from "../../../img/Naruto-icon.png";
-import { IoIosBookmark, IoIosContact } from "react-icons/io";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Nav() {
   return (
     <div>
       <nav className="nav__container">
         <div className="nav__logo">
-          <img className="nav__logo-img" src={Logo} alt="Website logo"></img>
-          <p className="nav__logo-title">Anime Extra</p>
+          <Link
+            style={{
+              textDecoration: "none",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+            to="/"
+          >
+            <img className="nav__logo-img" src={Logo} alt="Website logo"></img>
+            <p className="nav__logo-title">Anime Extra</p>
+          </Link>
         </div>
 
         <div className="nav__list-container">
           <ul className="nav__list">
-            <NavLink style={{ textDecoration: "none" }} to="/anime">
+            <Link style={{ textDecoration: "none" }} to="/anime">
               <li className="nav__list-item">Anime</li>
-            </NavLink>
-            <NavLink style={{ textDecoration: "none" }} to="/manga">
+            </Link>
+            <Link style={{ textDecoration: "none" }} to="/manga">
               <li className="nav__list-item">Manga</li>
-            </NavLink>
+            </Link>
           </ul>
         </div>
-
-        <ul className="nav__list-icons">
-          <NavLink to="/bookmarks">
-            <li className="nav__list-icons-icon">
-              <IoIosBookmark />
-            </li>
-          </NavLink>
-          <li className="nav__list-icons-icon">
-            <IoIosContact />
-          </li>
-        </ul>
       </nav>
     </div>
   );

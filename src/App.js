@@ -20,6 +20,7 @@ function App() {
             <TransitionGroup>
               <CSSTransition key={location.key} timeout={450} classNames="fade">
                 <Switch>
+                  <Route path="/" exact component={AnimeContainer} />
                   <Route path="/anime" exact component={AnimeContainer} />
                   <Route path="/manga" exact component={MangaContainer} />
                   <Route path="/anime/:id" component={ItemDetail} />

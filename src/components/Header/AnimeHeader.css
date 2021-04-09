@@ -77,3 +77,14 @@
     top: 35%;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .header__title {
+    font-size: 2rem;
+  }
+
+  .header__description {
+    top: 35%;
+    color: #ffffff;
+  }
+}
